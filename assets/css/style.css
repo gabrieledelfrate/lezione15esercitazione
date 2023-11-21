@@ -124,6 +124,16 @@ h1 {
   margin-bottom: 0.7em;
 }
 
+h1 span {
+  background-image: url('../img/underline.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-attachment: scroll;
+  display: inline-block;
+  padding-bottom: 0.1em;
+}
+
 p,
 address,
 ul,
@@ -137,6 +147,15 @@ h1 + p {
   color: #a0a0a0;
 }
 
+#intro img{
+  float: left;
+}
+
+article#intro::after{
+  content: "";
+  clear: left;
+}
+
 @media screen and (max-width: 499px) {
   p,
   ul,
@@ -148,11 +167,20 @@ h1 + p {
     font-size: 1.8rem;
     font-weight: 700;
   }
+
 }
 
 @media screen and (min-width: 500px) {
   h1 {
     font-size: 3rem;
+    position: relative;
+  }
+
+  #linea > img {
+    position: absolute;
+    right: 1rem; 
+    bottom: -2vh; 
+    z-index: 0;
   }
 
   p,
